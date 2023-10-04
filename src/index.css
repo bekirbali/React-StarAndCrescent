@@ -17,7 +17,7 @@
 
 /* text part */
 .swiper-slide {
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(8px);
   font-size: 18px;
   color: #fff;
   -webkit-box-sizing: border-box;
