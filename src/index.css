@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
 .swiper {
   position: relative;
@@ -32,8 +32,16 @@
   width: 130%;
   height: 100%;
   -webkit-background-size: cover;
+  /* background-image: url("./assets/bakery.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.527),
+      rgba(0, 0, 0, 0.37)
+    ),
+    url("./assets/bakery.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 .swiper-slide .title {

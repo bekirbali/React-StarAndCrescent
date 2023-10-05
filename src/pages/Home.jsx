@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 import "../index.css";
 
-import { Parallax, Pagination, Navigation } from "swiper/modules";
+import { Parallax, Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const Home = () => {
   return (
@@ -25,21 +25,21 @@ const Home = () => {
           clickable: true,
         }}
         navigation={false}
-        modules={[Parallax, Pagination, Navigation]}
+        modules={[Parallax, Pagination, Navigation, Autoplay]}
         className="mySwiper"
-        aut
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
       >
         <div
           slot="container-start"
           className="parallax-bg"
-          style={{
-            backgroundImage: `url(${bakery})`,
-          }}
           data-swiper-parallax="-23%"
         ></div>
         <SwiperSlide>
           <div className="title font-extrabold" data-swiper-parallax="-300">
-            Pide ve Lahmacun
+            <p className="text-[88px]">Pide ve Lahmacun</p>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
             "Hamurun Ustalıkla Buluştuğu Lezzet Şöleni"
@@ -55,7 +55,7 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="title" data-swiper-parallax="-300">
-            Güveç
+            <p className="text-[88px]">Güveç</p>
           </div>
           <div className="subtitle" data-swiper-parallax="-200">
             "Yöresel Etin Lezzetli Buluşması"
