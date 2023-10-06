@@ -4,7 +4,7 @@ import "../index.css";
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white">
-      <div className="flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="flex flex-wrap items-center justify-between mx-auto p-4 h-[64px]">
         <Link to="/" className="flex items-center">
           <img
             src="https://flowbite.com/docs/images/logo.svg"
@@ -12,7 +12,7 @@ const Navbar = () => {
             alt="Flowbite Logo"
           />
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            MoonStar Pita
+            Ayyıldız Pide
           </span>
         </Link>
         <button
