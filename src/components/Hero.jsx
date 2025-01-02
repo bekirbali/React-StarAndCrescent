@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { dikguvec, diklahmacun, dikpide, drinks, wrapper } from "../assets";
+import { dikguvec, dikpide, drinks, allpides } from "../assets";
 
 const Hero = ({ activeTab, setActiveTab }) => {
   return (
@@ -25,8 +25,8 @@ const Hero = ({ activeTab, setActiveTab }) => {
         </div>
         <div className="cards all relative">
           <Link to="/listings" onClick={() => setActiveTab("all")}>
-            <img src={wrapper} alt="" />
-            <p>Tüm Ürünler</p>
+            <img src={allpides} alt="" />
+            <p className="!text-[rgba(255,255,255,0.97)]">Tüm Ürünler</p>
           </Link>
         </div>
       </div>

@@ -1,9 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // import bakery from "../assets/bakery.jpg";
 import {
-  pide,
-  guvec,
-  lahmacun,
   dikguvec,
   dikpide,
   diklahmacun,

@@ -2,7 +2,7 @@ import { meeting, specialday } from "../assets";
 
 const Header = () => {
   return (
-    <div className="flex justify-center items-center gap-10 mt-10 px-8">
+    <div className="flex justify-center items-center flex-col md:flex-row gap-10 mt-10 px-8">
       <div className="flex flex-col items-center gap-5">
         <img className="w-[80px]" src={meeting} alt="meeting" />
         <h2 className="font-extrabold text-xl">İş Yemekleri</h2>

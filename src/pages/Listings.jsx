@@ -3,7 +3,7 @@ import { allProducts, drinks, guvecler, listings } from "../utils/dummyData";
 const Listings = ({ activeTab, setActiveTab }) => {
   return (
     <>
-      <div className="flex justify-center gap-4 mb-8">
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
         <button
           className={`px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
             activeTab === "all"

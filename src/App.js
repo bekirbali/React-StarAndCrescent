@@ -3,7 +3,7 @@ import AppRouter from "./router/AppRouter";
 
 function App() {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <AppRouter />
     </div>
   );
