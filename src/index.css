@@ -129,6 +129,12 @@ body {
   background-color: #ff8a4c;
 }
 
+.all {
+  img {
+    filter: brightness(0.85);
+  }
+}
+
 @media screen and (max-width: 753px) {
   .swiper {
     height: calc(50vh - 64px);

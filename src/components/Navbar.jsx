@@ -25,12 +25,12 @@ const Navbar = () => {
         <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
           <li className="nav-item">
             <Link to="/" className="nav-link" onClick={toggleMenu}>
-              Home
+              Ana Sayfa
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/listings" className="nav-link" onClick={toggleMenu}>
-              Listings
+              Ürünlerimiz
             </Link>
           </li>
         </ul>

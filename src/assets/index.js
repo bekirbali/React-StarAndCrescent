@@ -16,6 +16,7 @@ import peynir from "./peynir.jpg";
 import sade from "./sade.jpg";
 import sucukkasar from "./sucukkaşar.jpg";
 import drinks from "./drinks.jpg";
+import allpides from "./allpides.jpg";
 
 export {
   guvec,
@@ -36,4 +37,5 @@ export {
   sade,
   sucukkasar,
   drinks,
+  allpides,
 };
