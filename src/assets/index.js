@@ -8,6 +8,14 @@ import dikguvec from "./güveçdik.jpg";
 import meeting from "./meeting.png";
 import specialday from "./specialday.png";
 import wrapper from "./wrapper.jpg";
+import bizimguvec from "./bizimguvec.jpg";
+import bizimkuskas from "./bizimkuşkaş.jpg";
+import bizimlahmacun from "./bizimlahmacun.jpg";
+import masa from "./masa.jpg";
+import peynir from "./peynir.jpg";
+import sade from "./sade.jpg";
+import sucukkasar from "./sucukkaşar.jpg";
+import drinks from "./drinks.jpg";
 
 export {
   guvec,
@@ -20,4 +28,12 @@ export {
   meeting,
   specialday,
   wrapper,
+  bizimguvec,
+  bizimkuskas,
+  bizimlahmacun,
+  masa,
+  peynir,
+  sade,
+  sucukkasar,
+  drinks,
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import bakery from "../assets/bakery.jpg";
 import {
   pide,
@@ -7,6 +7,9 @@ import {
   dikguvec,
   dikpide,
   diklahmacun,
+  bizimguvec,
+  bizimlahmacun,
+  masa,
 } from "../assets";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,63 +24,9 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 
-const Home = () => {
+const Home = ({ activeTab, setActiveTab }) => {
   return (
     <div>
-      {/* <Swiper
-        style={{
-          "--swiper-navigation-color": "#00f853",
-        }}
-        speed={600}
-        parallax={true}
-        pagination={{
-          clickable: true,
-        }}
-        navigation={false}
-        modules={[Parallax, Pagination, Navigation, Autoplay]}
-        className="mySwiper"
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
-      >
-        <div
-          slot="container-start"
-          className="parallax-bg"
-          data-swiper-parallax="-23%"
-        ></div>
-        <SwiperSlide>
-          <div className="title font-extrabold" data-swiper-parallax="-100">
-            <p className="text-[88px]">Pide ve Lahmacun</p>
-          </div>
-          <div className="subtitle" data-swiper-parallax="-1200">
-            "Hamurun Ustalıkla Buluştuğu Lezzet Şöleni"
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              En taze malzemelerle hazırlanan incecik hamurun lezzetle buluştuğu
-              pide ve lahmacunlarımız, yöresel tatların en özel hali. Geleneksel
-              lezzetlerimizi sizlerle buluşturuyor, damaklarınıza unutulmaz bir
-              lezzet deneyimi sunuyoruz.
-            </p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="title" data-swiper-parallax="-300">
-            <p className="text-[88px]">Güveç</p>
-          </div>
-          <div className="subtitle" data-swiper-parallax="-200">
-            "Yöresel Etin Lezzetli Buluşması"
-          </div>
-          <div className="text" data-swiper-parallax="-100">
-            <p>
-              Sadece en kaliteli etlerle hazırladığımız güveçlerimizde, yöresel
-              lezzetin eşsiz buluşmasını yaşayacaksınız. Taze ve lezzetli
-              etlerin en özel hali, güveçlerimizde sizleri bekliyor.
-            </p>
-          </div>
-        </SwiperSlide>
-      </Swiper> */}
       <div>
         <Swiper
           style={{
@@ -99,7 +48,7 @@ const Home = () => {
             <div className="h-full relative">
               <picture>
                 <source srcSet={dikpide} media="(max-width: 753px)" />
-                <img src={pide} alt="pide" />
+                <img src={masa} alt="pide" className="!object-cover" />
               </picture>
               {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white text-center w-[50%]">
               <p className="text-[88px]">Pide ve Lahmacun</p>
@@ -117,7 +66,7 @@ const Home = () => {
             <div className="h-full relative">
               <picture>
                 <source srcSet={diklahmacun} media="(max-width: 753px)" />
-                <img src={lahmacun} alt="lahmacun" />
+                <img src={bizimlahmacun} alt="lahmacun" />
               </picture>
               {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white text-center w-[50%]">
               <p className="text-[88px]">Pide ve Lahmacun</p>
@@ -135,7 +84,7 @@ const Home = () => {
             <div className="h-full relative">
               <picture>
                 <source srcSet={dikguvec} media="(max-width: 753px)" />
-                <img src={guvec} alt="guvec" />
+                <img src={bizimguvec} alt="guvec" />
               </picture>
               {/* <div className="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center text-white text-center w-[50%]">
               <p className="text-[88px]">Pide ve Lahmacun</p>
@@ -155,7 +104,7 @@ const Home = () => {
         <Header />
       </div>
       <div>
-        <Hero />
+        <Hero activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
     </div>
   );
