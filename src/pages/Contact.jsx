@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import { SiUbereats } from "react-icons/si";
 import { getir, trendyol, yemeksepeti } from "../assets";
 
 const Contact = () => {
@@ -62,36 +61,44 @@ const Contact = () => {
               </div>
 
               <div>
-                <h2 className="text-2xl font-semibold text-orange-600 mb-4">
+                <h2 className="text-2xl font-semibold text-orange-600 mb-6">
                   Online Sipariş
                 </h2>
-                <div className="flex flex-col sm:flex-row items-center space-x-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <a
                     href="https://www.trendyol.com/s/trendyol-yemek"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
+                    className="transform hover:scale-105 transition-transform duration-300 flex justify-center items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg"
                   >
-                    <img src={trendyol} alt="" className="w-[150px] h-30" />
+                    <img
+                      src={trendyol}
+                      alt="Trendyol"
+                      className="w-32 object-contain"
+                    />
                   </a>
                   <a
                     href="https://getir.com/yemek/restoran/ayyildiz-pide-tavsanli-yeni-mah-tavsanli-kutahya/?adTrackingId="
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
+                    className="transform hover:scale-105 transition-transform duration-300 flex justify-center items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg"
                   >
-                    <img src={getir} alt="" className="w-[150px] h-30" />
+                    <img
+                      src={getir}
+                      alt="Getir"
+                      className="w-32 object-contain"
+                    />
                   </a>
                   <a
                     href="https://www.yemeksepeti.com/restaurant/u6j8/ayyildiz-pide"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
+                    className="transform hover:scale-105 transition-transform duration-300 flex justify-center items-center bg-white p-4 rounded-lg shadow-md hover:shadow-lg"
                   >
                     <img
                       src={yemeksepeti}
-                      alt=""
-                      className="w-[170px] h-[70px]"
+                      alt="Yemeksepeti"
+                      className="w-32 object-contain"
                     />
                   </a>
                 </div>
