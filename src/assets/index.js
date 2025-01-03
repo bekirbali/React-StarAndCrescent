@@ -17,6 +17,9 @@ import sade from "./sade.jpg";
 import sucukkasar from "./sucukkaşar.jpg";
 import drinks from "./drinks.jpg";
 import allpides from "./allpides.jpg";
+import getir from "./icons/getir.png";
+import yemeksepeti from "./icons/yemeksepeti.webp";
+import trendyol from "./icons/trendyolyemek.jpg";
 
 export {
   guvec,
@@ -38,4 +41,7 @@ export {
   sucukkasar,
   drinks,
   allpides,
+  getir,
+  yemeksepeti,
+  trendyol,
 };

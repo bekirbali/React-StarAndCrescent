@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
 import { SiUbereats } from "react-icons/si";
+import { getir, trendyol, yemeksepeti } from "../assets";
 
 const Contact = () => {
   return (
@@ -38,7 +39,7 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold">Adres:</h3>
                       <p className="text-gray-600">
-                        Yeni Mahalle, 23 Nisan Cd. No:23, 34570 Silivri/İstanbul
+                        Adnan Menderes Bulv. No:62/A, BİM yanı Tavşanlı/Kütahya
                       </p>
                     </div>
                   </div>
@@ -64,15 +65,34 @@ const Contact = () => {
                 <h2 className="text-2xl font-semibold text-orange-600 mb-4">
                   Online Sipariş
                 </h2>
-                <div className="flex items-center space-x-4">
+                <div className="flex flex-col sm:flex-row items-center space-x-4">
                   <a
-                    href="https://www.ubereats.com"
+                    href="https://www.trendyol.com/s/trendyol-yemek"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center space-x-2 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
+                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
                   >
-                    <SiUbereats className="text-xl" />
-                    <span>Uber Eats</span>
+                    <img src={trendyol} alt="" className="w-[150px] h-30" />
+                  </a>
+                  <a
+                    href="https://getir.com/yemek/restoran/ayyildiz-pide-tavsanli-yeni-mah-tavsanli-kutahya/?adTrackingId="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
+                  >
+                    <img src={getir} alt="" className="w-[150px] h-30" />
+                  </a>
+                  <a
+                    href="https://www.yemeksepeti.com/restaurant/u6j8/ayyildiz-pide"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center space-x-2 bg-none text-white px-2 py-1 rounded-lg"
+                  >
+                    <img
+                      src={yemeksepeti}
+                      alt=""
+                      className="w-[170px] h-[70px]"
+                    />
                   </a>
                 </div>
               </div>

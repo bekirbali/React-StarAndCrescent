@@ -13,7 +13,7 @@ const Footer = () => {
               İletişim
             </h3>
             <p className="mb-2">
-              Adres: Adnan Menderes Blv. No:64 / BİM yanı Tavşanlı/Kütahya
+              Adres: Adnan Menderes Bulv. No:62/A, BİM yanı Tavşanlı/Kütahya
             </p>
             <p className="mb-2">Telefon: +90 543 584 4848</p>
             <p>Email: info@ayyildizpide.com</p>
