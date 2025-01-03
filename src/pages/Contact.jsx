@@ -1,6 +1,5 @@
 import React from "react";
 import { FaPhone, FaMapMarkerAlt } from "react-icons/fa";
-import { SiUbereats } from "react-icons/si";
 import { getir, trendyol, yemeksepeti } from "../assets";
 
 const Contact = () => {
