@@ -10,22 +10,23 @@ const Contact = () => {
           İletişim
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           {/* Map Section */}
-          <div className="w-full h-[450px]">
+          <div className="w-full h-[400px] md:h-[520px] rounded-lg overflow-hidden">
             <iframe
               title="location"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d646.8333262761784!2d29.500662666368623!3d39.53986983553782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c975576b82354b%3A0xfb9984a0af377599!2sAyy%C4%B1ld%C4%B1z%20Pide%20Salonu!5e0!3m2!1str!2str!4v1735925827296!5m2!1str!2str"
               width="100%"
-              height="520px"
-              allowfullscreen=""
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
 
           {/* Contact Information Section */}
-          <div className="bg-white p-8 rounded-lg shadow-lg">
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg">
             <div className="space-y-6">
               <div>
                 <h2 className="text-2xl font-semibold text-orange-600 mb-4">
