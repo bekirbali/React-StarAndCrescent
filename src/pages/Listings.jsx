@@ -3,11 +3,11 @@ import { allProducts, drinks, guvecler, listings } from "../utils/dummyData";
 const Listings = ({ activeTab, setActiveTab }) => {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-4 mb-8">
+      <div className="flex flex-wrap justify-center gap-4 mb-8 mt-2">
         <button
-          className={`px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
+          className={`w-[175px] px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
             activeTab === "all"
-              ? "bg-orange-400 text-white"
+              ? "bg-[#ff8500] text-white"
               : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
           onClick={() => setActiveTab("all")}
@@ -15,9 +15,9 @@ const Listings = ({ activeTab, setActiveTab }) => {
           TÜM ÜRÜNLER
         </button>
         <button
-          className={`px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
+          className={`w-[175px] px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
             activeTab === "pideler"
-              ? "bg-orange-400 text-white"
+              ? "bg-[#ff8500] text-white"
               : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
           onClick={() => setActiveTab("pideler")}
@@ -25,9 +25,9 @@ const Listings = ({ activeTab, setActiveTab }) => {
           PİDELER
         </button>
         <button
-          className={`px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
+          className={`w-[175px] px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
             activeTab === "guvec"
-              ? "bg-orange-400 text-white"
+              ? "bg-[#ff8500] text-white"
               : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
           onClick={() => setActiveTab("guvec")}
@@ -35,9 +35,9 @@ const Listings = ({ activeTab, setActiveTab }) => {
           GÜVEÇLER
         </button>
         <button
-          className={`px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
+          className={`w-[175px] px-6 py-2 text-lg font-semibold rounded-lg transition-all ${
             activeTab === "drinks"
-              ? "bg-orange-400 text-white"
+              ? "bg-[#ff8500] text-white"
               : "bg-gray-200 text-gray-700 hover:bg-gray-300"
           }`}
           onClick={() => setActiveTab("drinks")}
@@ -48,7 +48,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
 
       {activeTab === "all" && (
         <>
-          <h2 className="text-[35px] my-5 font-bold text-center text-orange-400">
+          <h2 className="text-[35px] my-5 font-bold text-center text-[#ff8500]">
             TÜM ÜRÜNLER
           </h2>
           <div className="listing-container">
@@ -80,7 +80,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
 
       {activeTab === "pideler" && (
         <>
-          <h2 className="text-[35px] my-5 font-bold text-center text-orange-400">
+          <h2 className="text-[35px] my-5 font-bold text-center text-[#ff8500]">
             PİDELER
           </h2>
           <div className="listing-container">
@@ -112,7 +112,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
 
       {activeTab === "guvec" && (
         <>
-          <h2 className="text-[35px] my-5 font-bold text-center text-orange-400">
+          <h2 className="text-[35px] my-5 font-bold text-center text-[#ff8500]">
             GÜVEÇLER
           </h2>
           <div className="listing-container">
@@ -144,7 +144,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
 
       {activeTab === "drinks" && (
         <>
-          <h2 className="text-[35px] my-5 font-bold text-center text-orange-400">
+          <h2 className="text-[35px] my-5 font-bold text-center text-[#ff8500]">
             İÇECEKLER
           </h2>
           <div className="listing-container">
