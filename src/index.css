@@ -98,11 +98,12 @@ h4 {
 
 .listing-name {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #030303da;
-  padding: 20px 3px;
+  padding: 20px 12px;
   text-transform: uppercase;
-  background-color: #ff8a4c;
+  background-color: #ff8500;
+  color: white;
 }
 
 .listing-price {
@@ -110,12 +111,13 @@ h4 {
   justify-content: space-between;
   align-items: center;
   border: 1px solid #030303a9;
-  padding: 10px 3px;
+  padding: 10px 2px;
   border-top: none;
 }
 
 .price {
-  background-color: #ff8a4c !important;
+  background-color: #ff8500;
+  color: white;
   padding: 5px 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -124,17 +126,19 @@ h4 {
 .cart {
   display: flex;
   align-items: center;
-  border: 2px solid #ff8a4c;
+  border: 2px solid #ff8500;
   padding: 0 5px;
   font-weight: 600;
   height: 50px;
   border-radius: 10px;
   cursor: pointer;
   transition: ease-in-out 0.2s;
+  color: #ff8500;
 }
 
 .cart:hover {
-  background-color: #ff8a4c;
+  background-color: #ff8500;
+  color: white;
 }
 
 .all img {
@@ -219,7 +223,8 @@ h4 {
 }
 
 .nav-link:hover {
-  color: #ff8a4c;
+  color: #ff8500;
+  color: white;
 }
 
 .hamburger {
