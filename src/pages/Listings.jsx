@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import { allProducts, drinks, guvecler, listings } from "../utils/dummyData";
 
 const Listings = ({ activeTab, setActiveTab }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <div className="flex flex-wrap justify-center gap-4 mb-8 mt-2">
