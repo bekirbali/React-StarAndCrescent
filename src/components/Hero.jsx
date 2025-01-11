@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { dikguvec, dikpide, drinks, allpides } from "../assets";
 
-const Hero = ({ activeTab, setActiveTab }) => {
+const Hero = ({ setActiveTab }) => {
   return (
     <div className="flex justify-center">
       <div className="w-[96%] flex justify-center items-center flex-wrap gap-5 my-10">
@@ -18,7 +18,7 @@ const Hero = ({ activeTab, setActiveTab }) => {
           </Link>
         </div>
         <div className="cards guvec relative">
-          <Link to="/listings" onClick={() => setActiveTab("güveçler")}>
+          <Link to="/listings" onClick={() => setActiveTab("guvec")}>
             <img src={dikguvec} alt="" />
             <p className="!text-[rgba(255,255,255,0.815)]">Güveçler</p>
           </Link>
