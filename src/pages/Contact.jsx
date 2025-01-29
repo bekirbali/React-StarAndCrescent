@@ -45,17 +45,19 @@ const Contact = () => {
                   </div>
 
                   <div className="flex items-center space-x-3">
-                    <div className="flex items-center">
-                      <FaPhone className="text-orange-600 text-xl" />
-                      <div>
-                        <h3 className="font-semibold">Sabit Telefon:</h3>
-                        <p className="text-gray-600">+90 (274) 615 32 00</p>
-                      </div>
-                    </div>
                     <div className="flex items-center space-x-3">
-                      <div>
-                        <h3 className="font-semibold">Cep Telefonu:</h3>
-                        <p className="text-gray-600">+90 (543) 584 4848</p>
+                      <FaPhone className="text-orange-600 text-xl" />
+                      <div className="flex flex-col gap-2 items-center space-x-3">
+                        <div>
+                          <h3 className="font-semibold">Sabit Telefon:</h3>
+                          <p className="text-gray-600">+90 (274) 615 32 00</p>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <div>
+                            <h3 className="font-semibold">Cep Telefonu:</h3>
+                            <p className="text-gray-600">+90 (543) 584 4848</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
