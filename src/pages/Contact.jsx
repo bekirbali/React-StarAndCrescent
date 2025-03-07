@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaPhone,
-  FaMapMarkerAlt,
-  FaClock,
-  FaEnvelope,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaPhone, FaMapMarkerAlt, FaClock, FaWhatsapp } from "react-icons/fa";
 import { getir, trendyol, yemeksepeti, wrapper } from "../assets";
 
 const Contact = () => {
