@@ -1,10 +1,54 @@
 import { useEffect } from "react";
 import { allProducts, drinks, guvecler, listings } from "../utils/dummyData";
+import { useCart } from "../utils/CartContext";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Listings = ({ activeTab, setActiveTab }) => {
+  const { addToCart } = useCart();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    toast.success(`${product.name} sepete eklendi!`, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  };
+
+  const renderProductCard = (item) => (
+    <div
+      key={item.id}
+      className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+    >
+      <div className="h-[300px] bg-black overflow-hidden">
+        <img
+          className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
+          src={item.img}
+          alt={item.name}
+        />
+      </div>
+      <div className="p-6">
+        <p className="text-[22px] font-bold text-gray-800 mb-4">{item.name}</p>
+        <div className="flex items-center justify-between">
+          <p className="text-[26px] font-bold text-[#ff8500]">{item.price}</p>
+          <button
+            className="px-6 py-2 bg-[#ff8500] text-white rounded-full font-semibold hover:bg-[#e67a00] transition-colors duration-300"
+            onClick={() => handleAddToCart(item)}
+          >
+            SEPETE EKLE
+          </button>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
@@ -58,33 +102,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#ff8500] rounded-full"></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allProducts.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="h-[300px] bg-black overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
-                    src={item.img}
-                    alt={item.name}
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-[22px] font-bold text-gray-800 mb-4">
-                    {item.name}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <p className="text-[26px] font-bold text-[#ff8500]">
-                      {item.price}
-                    </p>
-                    <button className="px-6 py-2 bg-[#ff8500] text-white rounded-full font-semibold hover:bg-[#e67a00] transition-colors duration-300">
-                      SEPETE EKLE
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {allProducts.map(renderProductCard)}
           </div>
         </>
       )}
@@ -96,33 +114,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#ff8500] rounded-full"></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {listings.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="h-[300px] bg-black overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
-                    src={item.img}
-                    alt={item.name}
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-[22px] font-bold text-gray-800 mb-4">
-                    {item.name}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <p className="text-[26px] font-bold text-[#ff8500]">
-                      {item.price}
-                    </p>
-                    <button className="px-6 py-2 bg-[#ff8500] text-white rounded-full font-semibold hover:bg-[#e67a00] transition-colors duration-300">
-                      SEPETE EKLE
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {listings.map(renderProductCard)}
           </div>
         </>
       )}
@@ -134,33 +126,7 @@ const Listings = ({ activeTab, setActiveTab }) => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#ff8500] rounded-full"></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {guvecler.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="h-[300px] bg-black overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
-                    src={item.img}
-                    alt={item.name}
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-[22px] font-bold text-gray-800 mb-4">
-                    {item.name}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <p className="text-[26px] font-bold text-[#ff8500]">
-                      {item.price}
-                    </p>
-                    <button className="px-6 py-2 bg-[#ff8500] text-white rounded-full font-semibold hover:bg-[#e67a00] transition-colors duration-300">
-                      SEPETE EKLE
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {guvecler.map(renderProductCard)}
           </div>
         </>
       )}
@@ -172,36 +138,12 @@ const Listings = ({ activeTab, setActiveTab }) => {
             <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#ff8500] rounded-full"></div>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {drinks.map((item) => (
-              <div
-                key={item.id}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className="h-[300px] bg-black overflow-hidden">
-                  <img
-                    className="w-full h-full object-cover hover:scale-110 transition-all duration-500"
-                    src={item.img}
-                    alt={item.name}
-                  />
-                </div>
-                <div className="p-6">
-                  <p className="text-[22px] font-bold text-gray-800 mb-4">
-                    {item.name}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <p className="text-[26px] font-bold text-[#ff8500]">
-                      {item.price}
-                    </p>
-                    <button className="px-6 py-2 bg-[#ff8500] text-white rounded-full font-semibold hover:bg-[#e67a00] transition-colors duration-300">
-                      SEPETE EKLE
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+            {drinks.map(renderProductCard)}
           </div>
         </>
       )}
+
+      <ToastContainer />
     </div>
   );
 };
