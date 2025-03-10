@@ -3,6 +3,7 @@ import Home from "../pages/Home";
 import Listings from "../pages/Listings";
 import Contact from "../pages/Contact";
 import CartPage from "../pages/CartPage";
+import About from "../pages/About";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useState } from "react";
@@ -26,6 +27,7 @@ const AppRouter = () => {
             }
           />
           <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
           <Route path="cart" element={<CartPage />} />
         </Routes>
         <Footer />
