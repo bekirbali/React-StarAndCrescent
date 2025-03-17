@@ -52,6 +52,11 @@ const About = () => {
       description:
         "Müşterilerimizin memnuniyeti bizim için her şeyden önemlidir.",
     },
+    {
+      icon: <FaUsers className="text-4xl text-red-600 mb-4" />,
+      title: "Güven",
+      description: "Güven ve güvenli bir ortam sunuyoruz.",
+    },
   ];
 
   return (
