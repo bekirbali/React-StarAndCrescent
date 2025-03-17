@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-// import bakery from "../assets/bakery.jpg";
 import {
   dikguvec,
   dikpide,
